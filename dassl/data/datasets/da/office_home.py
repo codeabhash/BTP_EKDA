@@ -2,10 +2,11 @@ import os.path as osp
 
 from dassl.utils import listdir_nohidden
 
-from dassl.data.datasets import DATASET_REGISTRY, Datum, DatasetBase
+from ..build import DATASET_REGISTRY
+from ..base_dataset import Datum, DatasetBase
 
 
-# @DATASET_REGISTRY.register()
+@DATASET_REGISTRY.register()
 class OfficeHome(DatasetBase):
     """Office-Home.
 

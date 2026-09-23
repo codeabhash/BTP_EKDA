@@ -1,7 +1,7 @@
 __pycache__/
 *.pyc
-output/
-assets/
-data/
+/output/
+/assets/
+/data/
 .idea/
 .DS_Store

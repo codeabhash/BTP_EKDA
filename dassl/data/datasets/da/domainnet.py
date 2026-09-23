@@ -6,7 +6,7 @@ from dassl.utils import listdir_nohidden
 from dassl.data.datasets import DATASET_REGISTRY, Datum, DatasetBase
 
 
-# @DATASET_REGISTRY.register()
+@DATASET_REGISTRY.register()
 class DomainNet(DatasetBase):
     """DomainNet.
 

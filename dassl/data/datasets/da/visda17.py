@@ -1,9 +1,10 @@
 import os.path as osp
 
-from dassl.data.datasets import DATASET_REGISTRY, Datum, DatasetBase
+from ..build import DATASET_REGISTRY
+from ..base_dataset import Datum, DatasetBase
 
 
-# @DATASET_REGISTRY.register()
+@DATASET_REGISTRY.register()
 class VisDA17(DatasetBase):
     """VisDA17.
 
@@ -27,17 +28,14 @@ class VisDA17(DatasetBase):
             cfg.DATASET.SOURCE_DOMAINS, cfg.DATASET.TARGET_DOMAINS
         )
 
-        # train_x = self._read_data("synthetic")
-        # train_u = self._read_data("real")
-        # test = self._read_data("real")
-        train_x = self._read_data(cfg.DATASET.SOURCE_DOMAINS)
-        train_u = self._read_data(cfg.DATASET.TARGET_DOMAINS)
-        test = self._read_data(cfg.DATASET.TARGET_DOMAINS)
+        train_x = self._read_data("synthetic")
+        train_u = self._read_data("real")
+        test = self._read_data("real")
 
         super().__init__(train_x=train_x, train_u=train_u, test=test)
 
     def _read_data(self, dname):
-        filedir = "train" if dname[0] == "synthetic" else "validation"
+        filedir = "train" if dname == "synthetic" else "validation"
         image_list = osp.join(self.dataset_dir, filedir, "image_list.txt")
         items = []
         # There is only one source domain

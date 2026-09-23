@@ -2,10 +2,11 @@ import os.path as osp
 
 from dassl.utils import listdir_nohidden
 
-from dassl.data.datasets import DATASET_REGISTRY, Datum, DatasetBase
+from ..build import DATASET_REGISTRY
+from ..base_dataset import Datum, DatasetBase
 
 
-# @DATASET_REGISTRY.register()
+@DATASET_REGISTRY.register()
 class Office31(DatasetBase):
     """Office-31.
 
@@ -41,7 +42,7 @@ class Office31(DatasetBase):
         items = []
 
         for domain, dname in enumerate(input_domains):
-            domain_dir = osp.join(self.dataset_dir, dname, 'images')
+            domain_dir = osp.join(self.dataset_dir, dname)
             class_names = listdir_nohidden(domain_dir)
             class_names.sort()
 
