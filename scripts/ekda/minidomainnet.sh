@@ -1,0 +1,12 @@
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 c-p 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 c-r 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 c-s 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 p-c 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 p-r 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 p-s 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 r-c 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 r-p 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 r-s 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 s-c 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 s-p 0 100
+bash scripts/ekda/main_ekda.sh minidomainnet b32_ep10_minidomainnet EKDA ViT-B/16 4 s-r 0 100

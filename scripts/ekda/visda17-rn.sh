@@ -1,0 +1,1 @@
+bash scripts/ekda/main_ekda.sh visda17 b32_ep10_visda EKDA RN101 4 s-r 3 100
